@@ -1,7 +1,6 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
 import styles from './style.module.css'
-import ibetoLogo from '../../img/ibetologo.png'
 import dhoni from '../../img/dhoni.jpeg'
 import hello from'../../img/hello.jpeg'
 
@@ -22,16 +21,15 @@ export default class ContactsPage extends React.Component {
                     imgsrc: dhoni,
                     description:"Designation",
                     emailId:"msdhoni@gmail.com",
-                    tele:"+918592835329"
-                
-                
+                    tele:"+910000000000",
                 },
                 {
                     name: "MS Dhoni",
                     imgsrc: dhoni,
                     description: "Designation",
                     emailId: "msdhoni@gmail.com",
-                    tele: "+917907086032"
+                    tele: "+910000000000",
+                    linkedin: "www.hai.com",
                 },
                 {
                     name: "MS Dhoni",

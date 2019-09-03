@@ -1,6 +1,7 @@
 
 	
-	.colorwhite {
+	.colorwhite 
+	{
 		color: white;
 		text-align: center;
 		padding-top: 10vh;
@@ -11,9 +12,11 @@
 	
 	#event-grid {
 		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-row-gap: 12vw;
+		grid-template-columns: auto auto auto auto;
+		grid-row-gap: 2vw; 
 		margin-top: -5vh;
+		margin-left: 24vh;
+		margin-right: 0vh;
 	}
 	.hrline{
 		margin-top:5vw; 
@@ -61,87 +64,38 @@
 		overflow: auto;
 		background: black;
 	}
+	
 
 /* mobile devices */
 
-@media only screen and (min-width: 700px) and (max-width: 1300px) {
-	
-	
-	.color-white-dialogue{
-		color:gray;
-		font-size: 3vh;
-		line-height: 5%;
-		padding-bottom: 1vw;
+
+
+
+@media screen and (min-width:0px) and (max-width:480px){
+	#event-grid{
+		grid-template-columns: auto;
+		margin: 0vh 0vw;
 	}
-	.hrline{
-		margin-top:6vw; 
-		margin-left: 15vw;
-		margin-right: 15vw;
-	}
-	#event-grid {
-		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-row-gap: 12vw;
-		margin-top: -5vh;
-	}
-	.test-container {
-		padding-top: 5vw;
-		text-align: center;
-		padding-bottom: 10vw;
+
+	.title{
+		font-size: 25px;
 	}
 }
 
-@media only screen and (min-width:500px) and (max-width:699px){
-	#event-grid {
-		display: grid;
+@media screen  and  (min-width:480px) and (max-width:700px){
+	#event-grid{
 		grid-template-columns: auto auto;
-		grid-row-gap: 12vw;
-		margin-top: -5vh;
-	}
-	.color-white-dialogue{
-		color:gray;
-		font-size: 3vh;
-		line-height: 5%;
-		padding-bottom: 2vw;
-	}
-	.hrline{
-		margin-top:6vw; 
-		border: 1px solid orange;
-		margin-left: 15vw;
-		margin-right: 15vw;
-	}
-	.test-container {
-		padding-top: 5vw;
-		text-align: center;
-		padding-bottom: 10vw;
-	}
-	.color-white-image{
-		width: 23%;
+		margin: 0vh 8vw;
+		grid-gap: 1.7vw;
 	}
 }
 
-@media only screen and (max-width: 499px) {
-	#event-grid {
-		display: flex;
-		flex-direction: column;		
-	}
-	.color-white-image{
-		width: 30%;
-	}
-	.color-white-dialogue{
-		color:gray;
-		font-size: 3vh;
-		line-height: 10%;
-	}
-	.hrline{
-		margin-top:10vw; 
-		border: 1px solid orange;
-		margin-left: 15vw;
-		margin-right: 15vw;
+@media screen and  (min-width:700px) and (max-width:1300px){
+	#event-grid{
+		grid-template-columns: auto auto auto;
+		margin: 0vh 8vw;
+
+		grid-gap: 1.7vw;
 	}
 }
 
-	
-	
-	
-	

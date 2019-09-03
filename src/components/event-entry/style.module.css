@@ -1,0 +1,77 @@
+.event-card {
+    position: relative;
+    width: 25rem;
+    margin: 0.3rem auto;
+    border-radius: 4px;
+    color: white;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 8px 24px -2px black;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.event {
+    background-color: #1b1d1e;
+    text-decoration: none;
+    height: 6rem;
+    padding: 1rem;
+}
+
+.event-logo {
+    padding: 0.5rem;
+    height: 9rem;
+    margin: auto auto;
+}
+
+.event-name {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    text-align: center
+}
+
+.event-description {
+    font-size: 0.9rem;
+}
+
+.logos {
+    max-height: 9.5rem;
+}
+
+.learnmore-container {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .event-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event-card {
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .event-description {
+        
+    }
+
+    .learnmore-container{
+        display: block;
+        background-color: #048a68;
+        padding: 1rem;
+    }
+
+    .learn-more {
+        margin: auto auto;
+        width: 90vw;
+        padding: 0.7rem;
+        background-color: #048a68;
+        color: white;
+        border: 2px solid white;
+        text-decoration: none;
+    }
+}

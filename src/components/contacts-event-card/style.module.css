@@ -1,44 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Helvetica Neue');
 
 .event-card {
     position: relative;
-    height: 25vw;
-    width: 25vw;
-    color: black;
-    z-index: 0;
-    display: flex;    
-    box-shadow: 0 8px 20px -6px black;
-}
-.event-image {
-    position: relative;
-    height: 20vw;
-    width: 20vw;
-    color: black;
-    display: flex;
-    background-color: orange; 
-    padding: 2.5vw;
-}
-.event-in {
-    margin-top: 17vw;
-    position: relative;
-    height: 4vw;
+    height: 28vw;
     width: 20vw;
     color: white;
     z-index: 0;
+    margin-left: -13.5vw;
     display: flex;    
-    padding: 3vw;
 }
-.event-card:hover {
+
+.out{
+    position: relative;
+    height: 40vw;
+    width: 10vw;
+    color: white;
+    z-index: 0;
+    margin-left: -13vw;
+    display: flex;    
+    box-shadow: 0 8px 20px -6px black;
+}
+.second{
+    margin-top:6vh;
+    margin-left: -13.5vw;
+}
+.event-image {
+    position: relative;
+    height: 25.04vw;
+    width: 17vw;
+    color: black;
+    display: flex; 
+    padding: 2.5vw;
+}
+.logos {
+    max-width: 20vw;
+    height: 27vw;
+    margin-left: -2.5vw;
+    margin-top: -2.5vw;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    
+}
+.event-image:hover .overlay {
+    opacity: 1;
+}
+.event-card:hover .logos {
+    opacity: 0.3;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.event-in {
+    margin-top: 20vw;
+    position: relative;
+    height: 2.5vw;
+    width: 14.5vw;
+    color: white;
+    z-index: 0;
+    display: flex;    
+    padding: 2vw;
+}
+.logos:hover {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     transform: translateY(-7px);
+    opacity: 1;
     box-shadow: 0 14px 30px -6px black;
 }
 .event {
     width: 35vw;
     display: grid;
     grid-template-rows: 30% 60%;
-
 }
 .event .contact-info{
     font-size: 0.9em;
@@ -52,228 +102,295 @@ a{
     height: 14px;
     width: auto;
     border-radius: initial;
+    padding-right: 1vw;
+}
+.event .linkedin-image img{
+    height: 30px;
+    width: auto;
+    border-radius: initial;
 }
 .event .descp{
-    font-size: 1.5em;
+    font-size: 0.9vw;
     margin-top: 1.5vw;
     font-weight: bolder;
 }
 .event-name {
-    font-size: 2.2vw;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    margin-top: -2vw;
-    text-align: center;
-    background: linear-gradient(orange,orangered);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    margin-top: -3vw;
+    text-align: left;
 }
 .event-description {
-    font-size: 1.7vw;
-    margin-top: -1.5vw;
+    font-size: 1.5vw;
+    margin-top: 0vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    text-align: center;
-    
-
+    text-align: left;
+    color: gray;
 }
-
 .event-email-img{
     height: 14px;
     width: auto;
     border-radius: initial;
     display: inline-block;
-    padding: 0.5vw;
-    margin-top: -10vw;
+    padding: 1vw;
+    margin-top: 2vw;
     margin-left: -3vw;
 }
 .event-email-id{
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     font-weight: bold;
     display: inline-block;
     font-weight: 25;
-    margin-top: -10vw;    
+    margin-top: -10vw;
+    margin-left: 0.5vw;    
 }
+
 .event-tele{
     text-decoration: none;
     color: inherit;
     transition: 0.5s;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
-    margin-top: 0vw;
+    margin-top: -4vw;
     font-weight: 25;
-    
+    margin-left: -1.5vw;
 }
-.blue-square-container {
-    text-align: center;
-}
-.blue-square {
-
-    display: inline-block;
-
-}
-/* logos */
-
-.logos {
-    max-width: 19vw;
-    height: 18vw;
-    -ms-transform: rotate(358.5deg);
-    -ms-transform-origin: 20% 40%;
-    -webkit-transform: rotate(358deg);
-    -webkit-transform-origin: 20% 40%;
-    transform: rotate(358.5deg);
-    transform-origin: 20% 40%;
-    margin-left: 1vw;
-    margin-top: 1vw;
+.event-linkedin {
+    position: absolute;
+    bottom:5px;
+    right: -20px;
+    z-index: 1;
+    color: white;
 }
 
+.event-linkedin img{
+    height: 10vw;
+    width: auto;
+    border-radius: initial;
+}
 /* mobiles devices */
 
-@media only screen and (max-width: 499px) {
-    .event-card {
-        height: 80vw;
-        width: 100vw;
-        margin-left: 18vw;
-        margin-top: 10vw;
-        display: flex;    
+@media only screen and (min-width:0px) and (max-width:480px){
+    .event-card{
+        width: 75vw;
+        margin-left: -4vw;
+        margin-right: -4vw;
+        height: 90vw;
     }
-    .event-image {
-        height: 55vw;
-        width: 55vw;
-        color: black; 
-        padding: 2.5vw;
+    .logos{
+        max-width: 75vw;
+        height: 90vw;
     }
-    .event-in {
-        margin-top: 40vw;
-        position: relative;
-        height: 5vw;
-        width: 100vw;
-        display: flex;    
-        padding: 3vw;
-        margin-left: 10vw;
+    .event-in{
+        width: 52vw;
+        height: 13vw;
+        margin-top: 54vw;
+        padding-bottom: 17vw;
     }
-    .logos {
-        max-width: 48vw;
-        height: 48vw;
-        margin-top: 3.8vw;
-        margin-left: 4vw;
-    }
-    .event-name {
-        font-size: 5vw;
-        margin-left: -12vw;
-        margin-top: -5vw;
-    }
-    .event-description {
-        font-size: 5vw;
-        margin-top: -1vw;
-        margin-left: -12vw;
-        font-weight: 100;
-    }
-    .event-email-img{
-        height: 14px;
-        width: auto;
-        border-radius: initial;
-        display: inline-block;
-        padding: 0.5vw;
-        margin-left: -12vw;
-        margin-top: -5vw;
-    }
-    .event-email-id{
-        font-size: 5vw;
-        font-weight: bold;
-        display: inline-block;
+    .second{
+        width: 60vw;
+        height: 10vw;
         margin-left: 1vw;
-        font-weight: 75;
-        margin-top: 3.5vw;
+        margin-top: 4vw;
     }
-    .event-tele{
-        margin-top: 0vw;
-        margin-left: -12vw;
-        font-size: 4.5vw;
-        font-weight: 100;
-    }
-
-    
-}
-@media only screen and (min-width: 500px) and (max-width:699px) {
-    .event-card {
-        height: 20vw;
-        width: 20vw;
-        margin-left: -20vw;
-        margin-top: 5vw;
-        display: flex;
-        padding-bottom: 20vw;    
-    }
-    .event-image {
-        position: relative;
-        height: 30vw;
-        width: 30vw;
-        display: flex;  
-        padding: 2.5vw;
-        margin-left: 2vw;
-    }
-    .event-in {
-        margin-top: 30vw;
-        height: 5vw;
-        width: 100vw;
-        display: flex;    
-        padding: 3vw;
-        margin-left: -3vw;
-    }
-    .logos {
-        max-width: 30vw;
-        height: 30vw;
-    }
-    .event-name {
-        font-size: 3.5vw;
-        margin-top: -2vw;
-        margin-left: 1vw;
-    }
-    .event-description {
-        font-size: 3.1vw;
-        margin-top: 1vw;
-        font-weight: 100;
-        margin-left: 1vw;
-        font-size: 3.1vw;
-    }
-    .event-email-img{
-        height: 14px;
-        width: auto;
-        border-radius: initial;
-        display: inline-block;
-        padding: 0.8vw;
-        margin-left: -4.4vw;
-        margin-top: 2.8vw;
-    }
-    .event-email-id{
-        font-size: 3.1vw;
-        font-weight: bold;
-        display: inline-block;
-        font-weight: 75;
-    }
-    .event-tele{
-        text-decoration: none;
-        color: inherit;
-        transition: 0.5s;
-        margin-left: -2vw;
-        font-size: 3.1vw;
-        font-weight: 100;
-    }
-
-}
-@media only screen and (min-width: 700px) and (max-width:1300px) {
     .event-name{
-        font-size: 2.5vw;
+        font-size: 4.5vw;
+        margin-left: -5.5vw;
+        padding-top: 0vw;
     }
     .event-description{
-        font-size: 1.75vw;
+        font-size: 4vw;
+        margin-left: -5.5vw;
     }
     .event-email-id{
+        font-size: 4vw;
+        margin-top: 16vw;
+        position: absolute;
+    }
+    .event-tele{
+        font-size: 4vw;
+        margin-top: 15vw;
+        position: absolute;
+    }
+    .event .contact-info img{
+        height: 14px;
+        padding-right: 1vw;
+        margin-left: 2vw;
+        
+    }
+    .event .linkedin-image img{
+        height: 10vw;
+        margin-right: -10vw; 
+
+    }
+    .event-linkedin {
+        bottom:0px;
+    }
+    
+}
+@media only screen and (min-width:480px) and (max-width:700px){
+    .event-card{
+        width: 38vw !important;
+        margin-left: 0vw;
+        height: 52vw !important;
+    }
+    .logos{
+        max-width: 38vw !important;
+        height: 52vw !important;
+        position: relative;
+    }
+    .event-in{
+        width: 34vw;
+        height: 3vw;
+        margin-top: 37vw;
+        padding-bottom: 13.5vw;
+    }
+    .second{
+        width: 35vw;
+        height: 5vw;
+        margin-left: 0vw;
+        margin-top: 4vw;
+    }
+    .event-name{
+        font-size: 3vw;
+        padding-top: 0vw;
+    }
+    .event-description{
+        font-size: 2.5vw;
+        padding-top: 0vw;
+    }
+    .event-image {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        color: black;
+        display: flex; 
+        padding: 2.5vw;
+    }
+    .event-email-id{
+        font-size: 2.8vw;
+        margin-top: 1vw;
+        position: absolute;
+    }
+    .event-tele{
+        font-size: 2.5vw;
+        margin-top: 0vw;
+        position: absolute;
+    }
+    .event .contact-info img{
+        height: 14px;
+        padding-right: 2vw;
+        margin-left: 0.5vw;
+    }
+    .event .linkedin-image img{
+        height: 5.5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+    
+    /* .event-email-id{
         font-size: 2vw;
     }
     .event-tele{
-        font-size: 1.75vw;
+        font-size: 2vw;
     }
+    .event .contact-info img{
+        height: 14px;
+        padding-right: 1vw;
+        margin-left: 2vw;
+    }
+    .event .linkedin-image img{
+        height: 30px;
+        margin-right: 2vw;
+    } */
+    
+    
+
+}
+
+@media only screen and (min-width:700px) and (max-width:1300px){
+    .event-card{
+        width: 25vw !important;
+        margin-left: 0vw;
+        height: 33vw !important;
+    }
+    .logos{
+        max-width: 25vw !important;
+        height: 33vw !important;
+        position: relative;
+    }
+    .event-in{
+        width: 22vw;
+        height: 3vw;
+        margin-top: 30vw;
+        padding-bottom: 8vw;
+    
+    }
+    .second{
+        width: 20vw;
+        height: 3vw;
+        margin-left: 0vw;
+        margin-top: 2vw;
+    }
+    .event-name{
+        font-size: 2vw;
+        padding-top: 2vw;
+    }
+    .event-description{
+        font-size: 1.75vw;
+        padding-top: 0vw;
+    }
+
+    .event-email-id{
+        font-size: 2vw;
+        margin-top: -7vw;
+        position: absolute;
+    }
+    .event-tele{
+        font-size: 1.75vw;
+        margin-top: -7.75vw;
+        position: absolute;
+    }
+    .event .contact-info img{
+        height: 14px;
+        padding-right: 0vw;
+        margin-left: 0.5vw;
+    }
+    .event .linkedin-image img{
+        height: 3.25vw;
+        padding-right: 4.5vw;
+        padding-bottom: 10.5vw;
+    }
+
+
+    /* .event-email-id{
+        font-size: 2vw;
+        margin-top: -10vw;
+        position: absolute;
+    }
+    .event-tele{
+        font-size: 2vw;
+        margin-top: -10vw;
+        position: absolute;
+    }
+    .event .contact-info img{
+        height: 14px;
+        padding-right: 1vw;
+        margin-left: 2vw;
+    }
+    .event .linkedin-image img{
+        height: 30px;
+        margin-right: 2vw;
+        padding-bottom: 3vw;
+    } */
     
 }
+
+
+
+
+
+
 
